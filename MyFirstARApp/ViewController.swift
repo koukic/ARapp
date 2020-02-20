@@ -17,6 +17,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.sceneView = ARSCNView(frame: self.view.frame)
+        self.view.addSubview(self.sceneView)
+        
         // Set the view's delegate
         sceneView.delegate = self
         
@@ -24,10 +27,47 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        let scene = SCNScene()
+        
+        let box = SCNBox(width: 0.2, height: 0.2, length: 0.2, chamferRadius: 0)
+        
+        let material = SCNMaterial()
+        // material.diffuse.contents = UIColor.blue
+        material.diffuse.contents  = UIImage(named: "brick.jpg")
+        
+        let node = SCNNode()
+        node.geometry = box
+        node.geometry?.materials = [material]
+        node.position = SCNVector3(0, 0.2, -0.5)
+        
+        let sphere = SCNSphere(radius: 0.2)
+        
+        let sphereMaterial = SCNMaterial()
+        // sphereMaterial.diffuse.contents = UIColor.green
+        sphereMaterial.diffuse.contents = UIImage(named: "earthmap.jpeg")
+        
+        let sphereNode = SCNNode()
+        sphereNode.geometry = sphere
+        sphereNode.geometry?.materials = [sphereMaterial]
+        sphereNode.position = SCNVector3(0.4, 0.1, -1)
+        
+        scene.rootNode.addChildNode(node)
+        scene.rootNode.addChildNode(sphereNode)
         
         // Set the scene to the view
         sceneView.scene = scene
+    }
+    
+    @objc func tapped(recognizer: UIGestureRecognizer) {
+        let sceneView = recognizer.view as! SCNView
+        let touchLocation = recognizer.location(in: sceneView)
+        let hitResults = sceneView.hitTest(touchLocation, options: [:])
+        
+        if !hitResults.isEmpty {
+            let node = hitResults[0].node
+            let material = node.geometry?.material(named: "Color")
+            material?.diffuse.contents = UIColor.blue
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -13,6 +13,8 @@
 		1BB5C35523FE667900354E73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BB5C35323FE667900354E73 /* Main.storyboard */; };
 		1BB5C35723FE668000354E73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BB5C35623FE668000354E73 /* Assets.xcassets */; };
 		1BB5C35A23FE668000354E73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BB5C35823FE668000354E73 /* LaunchScreen.storyboard */; };
+		1BB5C3A423FE900900354E73 /* earthmap.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1BB5C3A323FE900900354E73 /* earthmap.jpeg */; };
+		1BB5C3A623FE902000354E73 /* brick.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1BB5C3A523FE902000354E73 /* brick.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		1BB5C35623FE668000354E73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BB5C35923FE668000354E73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BB5C35B23FE668000354E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BB5C3A323FE900900354E73 /* earthmap.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = earthmap.jpeg; sourceTree = "<group>"; };
+		1BB5C3A523FE902000354E73 /* brick.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brick.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				1BB5C34D23FE667900354E73 /* AppDelegate.swift */,
+				1BB5C3A323FE900900354E73 /* earthmap.jpeg */,
+				1BB5C3A523FE902000354E73 /* brick.jpg */,
 				1BB5C34F23FE667900354E73 /* art.scnassets */,
 				1BB5C35123FE667900354E73 /* ViewController.swift */,
 				1BB5C35323FE667900354E73 /* Main.storyboard */,
@@ -128,7 +134,9 @@
 				1BB5C35023FE667900354E73 /* art.scnassets in Resources */,
 				1BB5C35A23FE668000354E73 /* LaunchScreen.storyboard in Resources */,
 				1BB5C35723FE668000354E73 /* Assets.xcassets in Resources */,
+				1BB5C3A423FE900900354E73 /* earthmap.jpeg in Resources */,
 				1BB5C35523FE667900354E73 /* Main.storyboard in Resources */,
+				1BB5C3A623FE902000354E73 /* brick.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
